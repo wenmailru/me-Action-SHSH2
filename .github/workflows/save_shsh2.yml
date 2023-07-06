@@ -10,7 +10,7 @@ env:
   # FIRMWARE_BUILD_ID: 20F66 # if set this, FIRMWARE_VERSION will become invalid
   ## ---
   NO_BOARDBAND: false # Request tickets without baseband. If set true, BOARDBAND will become invalid
-  BOARDBAND: n71ap # recommend set this for iPhone
+  BOARDBAND: d20ap # recommend set this for iPhone
   ## ---
   GEN: "0xed7c6e9b3701d981" # manually specify generator in format 0x%%16llx
   APNONCE: "" # required for saving blobs for A12/S4 and newer devices with generator
