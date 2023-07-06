@@ -3,16 +3,16 @@ permissions: write-all # Allow Release 允许发布 release
 env:
   ## --- required 
   MODEL: iPhone8,1 # specify device by its model (eg. iPhone8,1)
-  ECID: ab46efcbf71 # must be either DEC or HEX
+  ECID: 1A09CE3ADB002E # must be either DEC or HEX
   ## --- choosing one of these three below and comment others
   LATEST: true # if set true, FIRMWARE_VERSION and FIRMWARE_BUILD_ID will become invalid
-  FIRMWARE_VERSION: 15.7 # specify firmware version
-  # FIRMWARE_BUILD_ID: 19H12 # if set this, FIRMWARE_VERSION will become invalid
+  FIRMWARE_VERSION: 16.5 # specify firmware version
+  # FIRMWARE_BUILD_ID: 20F66 # if set this, FIRMWARE_VERSION will become invalid
   ## ---
   NO_BOARDBAND: false # Request tickets without baseband. If set true, BOARDBAND will become invalid
   BOARDBAND: n71ap # recommend set this for iPhone
   ## ---
-  GEN: "0x1111111111111111" # manually specify generator in format 0x%%16llx
+  GEN: "0xed7c6e9b3701d981" # manually specify generator in format 0x%%16llx
   APNONCE: "" # required for saving blobs for A12/S4 and newer devices with generator
   ## --- Enable the following options to use beta firmware
   BETA: false
@@ -149,7 +149,7 @@ jobs:
         with:
           tag_name: ${{ steps.shsh2-info.outputs.tagName }}
           body: >-
-            ${{ format(fromJSON('"ecid: {0}\nmodel: {1}\nfirmware: {2}\nnonce: {3}\n\n\n本程序免费[开源](https://github.com/tom-snow/autosave_SHSH2)，如果你从其他人那付费获得了 Github Action 自动保存 shsh2 的程序，那么恭喜你被骗了！"'), 
+            ${{ format(fromJSON('"ecid: {0}\nmodel: {1}\nfirmware: {2}\nnonce: {3}\n\n\n本程序免费[开源](https://github.com/wenmailru/me-Action-SHSH2)，如果你从其他人那付费获得了 Github Action 自动保存 shsh2 的程序，那么恭喜你被骗了！"'), 
                 env.ECID, 
                 steps.shsh2-info.outputs.model, 
                 steps.shsh2-info.outputs.firmware, 
