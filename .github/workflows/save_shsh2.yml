@@ -32,7 +32,7 @@ on:
       args:
         description: 'Manual Arguments(Will use args here instead of using env. Use `--ecid` instead of `-e` if you get some error. Do not set `-s` and `--save-path`!)\n\n本程序免费开源，如果你从其他人那付费获得了 Github Action 自动保存 shsh2 的程序，那么恭喜你被骗了！'
         required: true
-        default: "-d iPhone6,2 -B n53ap --ecid 6F40A4CD908 -l"
+        default: "-d iPhone10,1 -B d20ap --ecid 1A09CE3ADB002E -l"
 
 jobs:
   save_shsh2:
